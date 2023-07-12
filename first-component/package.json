@@ -1,0 +1,7 @@
+{
+    "name": "firstcomponent",
+    "version": "0.1.0",
+    "dependencies": {
+      "wasm-bindgen": "^0.2.79"
+    }
+  } 
