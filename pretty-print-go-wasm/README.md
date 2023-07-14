@@ -15,16 +15,16 @@ go 1.20
 $
 ```
 
-- created main.go (just copied from the webassembly-part-1 folder)
+- created main.go in `src` folder(just copied from the webassembly-part-1 folder)
 
 - compiled to wasm:
 ```sh
 $ GOOS=js GOARCH=wasm go build -o main.wasm
 ```
 
-- copied over the go `wasm-exec.js` file (comes with go install; see tutorial)
+- copied the go `wasm-exec.js` file in `src` (comes with go install; see tutorial)
 
-- created the "wrapper" Javascript code in index.js
+- created the "wrapper" Javascript code in `src/index.js`
 
 - created package.json with what I think will be needed
 
