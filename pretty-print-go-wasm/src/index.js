@@ -6,7 +6,7 @@ const PrettyPrintGoWasm = async (jsonText) => {
 
     const go = new Go();
 
-    await WebAssembly.instantiateStreaming(fetch("json.wasm"), go.importObject).then((result) => {
+    await WebAssembly.instantiateStreaming(fetch("main.wasm"), go.importObject).then((result) => {
         go.run(result.instance);
     });
 
