@@ -1,15 +1,15 @@
 {
   "name": "pretty-print-json-go-wasm",
   "scripts": {
-    "build": "cross-env build",
-    "prepublishOnly": "rm -fr ./dist & babel ./src --out-dir ./dist -s inline"
+    "build": "react-scripts build",
+    "prepublishOnly": "rm -fr ./dist & babel ./src --out-dir ./dist -s inline & cp ./src/main.wasm ./dist"
   },
-  "version": "0.1.1",
+  "version": "0.1.2",
   "dependencies": {
   },
+  "main": "dist/index.js",
   "files": [
-    "index.js",
-    "main.wasm"
+    "dist/*"
   ],
   "devDependencies": {
     "@babel/cli": "^7.5.5",
@@ -21,6 +21,7 @@
     "babel-plugin-istanbul": "^5.2.0",
     "cross-env": "^6.0.3",
     "file-loader": "^4.2.0",
+    "react-scripts": "5.0.1",
     "webpack": "^4.39.1"
   }
 } 
