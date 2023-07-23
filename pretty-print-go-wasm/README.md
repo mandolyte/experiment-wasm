@@ -1,7 +1,7 @@
 # Attempting to make a WASM component and publish to NPM
 
 **NOTE**: testing with stackblitz:
-https://stackblitz.com/edit/stackblitz-starters-wa3lmu?file=package.jso
+https://stackblitz.com/edit/stackblitz-starters-wa3lmu
 
 - created this folder: `mkdir pretty-print-go-wasm`
 
@@ -93,3 +93,5 @@ tinygo build -o wasm.wasm -target wasm ./main.go
 Results: 
 - go wasm size was 2788448
 - tinygo size was   900648
+
+With this I was able to upload the WASM into my Stackblitz project.
