@@ -1,5 +1,8 @@
 # Attempting to make a WASM component and publish to NPM
 
+**NOTE**: testing with stackblitz:
+https://stackblitz.com/edit/stackblitz-starters-wa3lmu?file=package.jso
+
 - created this folder: `mkdir pretty-print-go-wasm`
 
 - created go.mod:
@@ -60,4 +63,20 @@ $
 ```
 
 - Link: https://www.npmjs.com/package/pretty-print-json-go-wasm
+
+# Trials and Tribulations
+
+## 2023-07-23
+
+Since the NPM component is unable to locate the WASM file within itself,
+I changed the code to retrieve from a known location. In this case, from
+the component's repo location. And then using a raw github fetch to 
+acquire the WASM file. That does not work, error is:
+
+```
+TypeError: Failed to execute 'compile' on 'WebAssembly': Incorrect response MIME type. Expected 'application/wasm'.
+```
+
+Here is a discussion of the issue:
+https://github.com/orgs/community/discussions/22863
 
