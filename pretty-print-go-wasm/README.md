@@ -80,3 +80,16 @@ TypeError: Failed to execute 'compile' on 'WebAssembly': Incorrect response MIME
 Here is a discussion of the issue:
 https://github.com/orgs/community/discussions/22863
 
+## Using tiny go
+
+Link: https://tinygo.org/docs/guides/webassembly/wasm/
+
+Command:
+
+```
+tinygo build -o wasm.wasm -target wasm ./main.go
+```
+
+Results: 
+- go wasm size was 2788448
+- tinygo size was   900648
