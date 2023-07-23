@@ -2,10 +2,11 @@
   "name": "pretty-print-json-go-wasm",
   "scripts": {
     "build": "react-scripts build",
-    "prepublishOnly": "rm -fr ./dist & babel ./src --out-dir ./dist -s inline & cp ./src/main.wasm ./dist"
+    "prepublishOnly": "rm -fr ./dist && babel ./src --out-dir ./dist -s inline && cp ./src/main.wasm ./dist/main.wasm"
   },
-  "version": "0.1.2",
+  "version": "0.1.10",
   "dependencies": {
+    "polyfill-crypto.getrandomvalues": "1.0.0"
   },
   "main": "dist/index.js",
   "files": [

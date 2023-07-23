@@ -3,6 +3,12 @@
 // license that can be found in the LICENSE file.
 
 "use strict";
+import getRandomValues from "polyfill-crypto.getrandomvalues";
+if (!globalThis.crypto) {
+  globalThis.crypto = {
+    getRandomValues,
+  };
+}
 
 (() => {
 	const enosys = () => {
@@ -551,4 +557,5 @@
 			};
 		}
 	}
+
 })();
