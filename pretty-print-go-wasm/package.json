@@ -4,7 +4,7 @@
     "build": "react-scripts build",
     "prepublishOnly": "rm -fr ./dist && babel ./src --out-dir ./dist -s inline && cp ./src/main.wasm ./dist/main.wasm"
   },
-  "version": "0.1.14",
+  "version": "0.1.15",
   "dependencies": {
     "polyfill-crypto.getrandomvalues": "1.0.0"
   },
