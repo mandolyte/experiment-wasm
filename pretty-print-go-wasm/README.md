@@ -95,3 +95,12 @@ Results:
 - tinygo size was   900648
 
 With this I was able to upload the WASM into my Stackblitz project.
+
+Have tried to locate it in:
+- `./pages/main.wasm` - did not work
+- `main.wasm` - did not work
+- `/main.wasm` - did not work
+- `/public/main.wasm` - found it, but returned this error:
+```
+TypeError: WebAssembly.instantiate(): Import #0 module="env" error: module is not an object or function
+```
