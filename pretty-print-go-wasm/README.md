@@ -87,7 +87,7 @@ Link: https://tinygo.org/docs/guides/webassembly/wasm/
 Command:
 
 ```
-tinygo build -o wasm.wasm -target wasm ./main.go
+tinygo build -o main.wasm -target wasm ./main.go
 ```
 
 Results: 
