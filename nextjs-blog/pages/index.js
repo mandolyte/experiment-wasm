@@ -8,14 +8,13 @@ export default function Home() {
   const [multiplyAnswer, setMultiplyAnswer] = useState(null)
 
   useEffect(() => {
-    const WASM_URL = 'wasm.wasm';
+    const WASM_URL = 'main.wasm';
     async function getWasm() {
-      console.log("type of Go is:",typeof Go)
+      // console.log("type of Go is:",typeof Go)
       const go = new window.Go(); // Defined in wasm_exec.js
-      // const go = Go; // Defined in wasm_exec.js // $$ Cecil
-      console.log("go is:", go)
+      // console.log("go is:", go)
 
-      console.log("fetching and setting up the WASM code at:",WASM_URL)
+      // console.log("fetching and setting up the WASM code at:",WASM_URL)
       WebAssembly.instantiateStreaming(fetch(WASM_URL), go.importObject).then(function (obj) {
         let _wasm = obj.instance;
         go.run(_wasm);
